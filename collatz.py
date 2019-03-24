@@ -1,5 +1,8 @@
+from timeit import default_timer as timer
+
+start = timer()
 #times it runs
-run = 10**2
+run = 10**2 + 1
 #successful times
 y=0
 
@@ -14,3 +17,6 @@ for i in range(2,run):
     else:
         y = int(y+1)
 print(y)
+
+end = timer()
+print(end - start)
