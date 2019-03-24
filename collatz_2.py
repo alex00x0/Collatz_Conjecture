@@ -6,18 +6,21 @@ import sys
 start = timer()
 
 def collatz():
-    x = 10**1000000000
+    #x = int(10**308.254715559916)
+    x = 1844674407370955161
+    print(x)
     steps = 0
 
     while x != 1:
-        #print(x, end=' ')
+        print(x, end=' ')
         if x % 2 == 0:
-            #// returns int instead of a float (allowing for larger numbers)
-            x = int(x // 2)
+            x = int(x / 2)
             steps = steps +1
+            print(x)
         else:
             x = int(3 * x + 1)
             steps = steps +1
+            print(x)
     else:
         #print(x)
         print("steps: ", steps)
@@ -26,3 +29,4 @@ collatz()
 #print(end='')
 end = timer()
 print('time:', end - start)
+
